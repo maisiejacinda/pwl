@@ -1,34 +1,34 @@
 <?php
 class Mahasiswa
 {
-    protected $nim, $nama, $tgl_lahir, $umur, $status;
+    // List of properties
+    public $nim;
+    public $nama;
+    public $programStudi;
 
-    public function __construct()
-    {
-        $this->status = 'Aktif';
-    }
-
-    public function setData($nim, $nama, $tgl_lahir)
+    // Method untuk mengatur data mahasiswa
+    function setData($nim, $nama, $programStudi)
     {
         $this->nim = $nim;
         $this->nama = $nama;
-        $this->tgl_lahir = $tgl_lahir;
-        $this->setUmur();
+        $this->programStudi = $programStudi;
     }
 
-    public function setUmur()
-    {
-        $this->umur = date("Y") - substr($this->tgl_lahir, 0, 4);
-    }
-
-    public function getData()
+   
+    function getData()
     {
         return [
-            "nim" => $this->nim,
-            "nama" => $this->nama,
-            "tgl_lahir" => $this->tgl_lahir,
-            "umur" => $this->umur,
-            "status" => $this->status
+            'nim' => $this->nim,
+            'nama' => $this->nama,
+            'programStudi' => $this->programStudi
         ];
+    }
+
+    function tampilkanData()
+    {
+        echo "<p>Data Mahasiswa:</p>";
+        echo "NIM: " . $this->nim . "<br>";
+        echo "Nama: " . $this->nama . "<br>";
+        echo "Program Studi: " . $this->programStudi . "<br><br>";
     }
 }
