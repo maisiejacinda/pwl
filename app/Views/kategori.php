@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Kategori</title> <!-- Menentukan judul halaman -->
+    <title>Halaman Kategori</title>
 </head>
 <body>
-    <h1>Ini adalah halaman kategori</h1> <!-- Menampilkan judul halaman -->
+    <h1>Ini adalah halaman kategori</h1> 
     
-    <!-- Membuat daftar kategori dengan tautan ke halaman detail -->
     <ul>
         <li><a href="<?= base_url('kategori/Alat Tulis') ?>">Alat Tulis</a></li>
         <li><a href="<?= base_url('kategori/Pakaian') ?>">Pakaian</a></li>
