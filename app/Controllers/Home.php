@@ -2,13 +2,6 @@
 
 namespace App\Controllers;
 
-<<<<<<< HEAD
-class Home extends BaseController
-{
-    public function index(): string
-    {
-        return view('welcome_message');
-=======
 class Home extends BaseController 
 {
     public function index()
@@ -33,7 +26,7 @@ class Home extends BaseController
 
         $data['kategori'] = $kategori;
         $data['produk'] = $produkList[$kategori] ?? [];
+        
         return view('detail_kategori', $data);
->>>>>>> 10bdc49ebe02728f59295060d8cd0bfd2405dc83
     }
 }
